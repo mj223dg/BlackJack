@@ -5,19 +5,45 @@ using System.Text;
 
 namespace BlackJack.view
 {
+    public enum GameChoice
+    {
+        NewGame,
+        Hit,
+        Stand,
+        Quit,
+        None
+    }
+
     class SimpleView : IView
     {
-
+        private const char KeyNewGame = 'p';
+        private const char Keyhit = 'h';
+        private const char KeyStand = 's';
+        private const char KeyQuit = 'q';
         public void DisplayWelcomeMessage()
         {
             System.Console.Clear();
             System.Console.WriteLine("Hello Black Jack World");
-            System.Console.WriteLine("Type 'p' to Play, 'h' to Hit, 's' to Stand or 'q' to Quit\n");
+            System.Console.WriteLine("Type '{0}' to Play, '{1}' to Hit, '{2}' to Stand or '{3}' to Quit\n", KeyNewGame, Keyhit, KeyStand, KeyQuit);
         }
 
-        public int GetInput()
+        public GameChoice GetInput()
         {
-            return System.Console.In.Read();
+            int input = System.Console.In.Read();
+
+            switch (input)
+            {
+                case KeyNewGame:
+                    return GameChoice.NewGame;
+                case Keyhit:
+                    return GameChoice.Hit;
+                case KeyStand:
+                    return GameChoice.Stand;
+                case KeyQuit:
+                    return GameChoice.Quit;
+                default:
+                    return GameChoice.None;
+            }
         }
 
         public void DisplayCard(model.Card a_card)

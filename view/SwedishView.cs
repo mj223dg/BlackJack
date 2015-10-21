@@ -7,16 +7,35 @@ namespace BlackJack.view
 {
     class SwedishView : IView 
     {
+        private const char KeyNewGame = 'p';
+        private const char Keyhit = 'h';
+        private const char KeyStand = 's';
+        private const char KeyQuit = 'q';
+
         public void DisplayWelcomeMessage()
         {
             System.Console.Clear();
             System.Console.WriteLine("Hej Black Jack Världen");
             System.Console.WriteLine("----------------------");
-            System.Console.WriteLine("Skriv 'p' för att Spela, 'h' för nytt kort, 's' för att stanna 'q' för att avsluta\n");
+            System.Console.WriteLine("Skriv '{0}' för att Spela, '{1}' för nytt kort, '{2}' för att stanna '{3}' för att avsluta\n", KeyNewGame, Keyhit, KeyStand, KeyQuit);
         }
-        public int GetInput()
+        public GameChoice GetInput()
         {
-            return System.Console.In.Read();
+            int input = System.Console.In.Read();
+
+            switch (input)
+            {
+                case KeyNewGame:
+                    return GameChoice.NewGame;
+                case Keyhit:
+                    return GameChoice.Hit;
+                case KeyStand:
+                    return GameChoice.Stand;
+                case KeyQuit:
+                    return GameChoice.Quit;
+                default:
+                    return GameChoice.None;
+            }
         }
         public void DisplayCard(model.Card a_card)
         {
