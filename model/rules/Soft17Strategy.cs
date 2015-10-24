@@ -13,9 +13,18 @@ namespace BlackJack.model.rules
         {
             if (a_dealer.CalcScore() == g_hitLimit)
             {
-
+                return;
             }
             return a_dealer.CalcScore() < g_hitLimit;
         }
+
+        private bool DealerHasAce(IEnumerable<Card> a_hand)
+        {
+            foreach (var card in a_hand)
+            {
+                if()
+            } 
+        }
+
     }
 }
