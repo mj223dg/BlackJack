@@ -9,7 +9,6 @@ namespace BlackJack.model.rules
     {
         private const int g_hitLimit = 17;
 
-        //När dealerns hand är lika med 17 
         public bool DoHit(model.Player a_dealer)
         {
 
