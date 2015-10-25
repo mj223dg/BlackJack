@@ -7,6 +7,6 @@ namespace BlackJack.model.rules
 {
         interface IEqualScoreStrategy
         {
-            bool Winner(int a_dealerScore, int a_playerScore);
+            bool Winner(Player a_player, Player a_dealer, int maxScore);
         }
 }

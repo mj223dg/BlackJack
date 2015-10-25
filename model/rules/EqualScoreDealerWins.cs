@@ -7,7 +7,7 @@ namespace BlackJack.model.rules
 {
     class EqualScoreDealerWins : IEqualScoreStrategy
     {
-        public bool winner(Dealer a_dealer, Player a_player, int maxScore)
+        public bool winner(Player a_player, Player a_dealer, int maxScore)
         {
             if (a_player.CalcScore() > maxScore)
             {
