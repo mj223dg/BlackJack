@@ -6,3 +6,5 @@ D:\Skolarbete\UML\Blackjack\BlackJack\obj\Debug\BlackJack.pdb
 C:\Users\Adam\Documents\GitHub\BlackJack\obj\Debug\BlackJack.exe
 C:\Users\Adam\Documents\GitHub\BlackJack\obj\Debug\BlackJack.pdb
 C:\Users\Adam\Documents\GitHub\BlackJack\obj\Debug\BlackJack.csprojResolveAssemblyReference.cache
+C:\Users\Adam\Documents\GitHub\BlackJack\bin\Debug\BlackJack.exe
+C:\Users\Adam\Documents\GitHub\BlackJack\bin\Debug\BlackJack.pdb

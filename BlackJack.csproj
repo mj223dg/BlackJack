@@ -83,6 +83,7 @@
     <Compile Include="model\rules\IHitStrategy.cs" />
     <Compile Include="model\rules\InternationalNewGameStrategy.cs" />
     <Compile Include="model\rules\INewGameStrategy.cs" />
+    <Compile Include="model\rules\NewStrategy.cs" />
     <Compile Include="model\rules\RulesFactory.cs" />
     <Compile Include="model\rules\Soft17Strategy.cs" />
     <Compile Include="Program.cs" />
